@@ -101,3 +101,21 @@ void layertra(node* root){
 		if(NULL!=temp->rightchild) temp_s.push_back(temp->rightchild);
 	}
 }
+//非递归实现先序遍历
+void nonrecursion_fronttra(node *root){
+	stack<node*> s0;
+	node* c_p=root;
+	//if(NULL==root) return ;
+	while(c_p!=NULL||!s0.empty()){
+		while(NULL!=c_p){
+			cout<<" "<<c_p->data;
+			s0.push(c_p);
+			c_p=c_p->leftchild;
+		}
+		if(!s0.empty()){
+			c_p=s0.top();
+			s0.pop();
+			c_p=c_p->rightchild;
+		}
+	}
+}
