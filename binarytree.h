@@ -10,4 +10,6 @@ void middletra(node *root);
 void backtra(node *root);
 void layertra(node* root);
 node *create_binarytree(const unsigned int count);
+//非递归实现先序遍历
+void nonrecursion_fronttra(node *root);
 #endif
